@@ -7,13 +7,18 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Raleway');
+    </style>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <div class="row">
       <div class="col-md-3">
+        <#% if user_signed_in? %>
         <%= render "shared/nav" %>
+        <#% end %>
     </div>
     <div class="wrapper">
     <p class="notice"><%= notice %></p>
@@ -23,5 +28,8 @@
         <%= yield %>
       </div>
     </div>
+    <% if user_signed_in? %>
+    <%= link_to "My Account", user_show_path %>
+    <% end %>
   </body>
 </html>
