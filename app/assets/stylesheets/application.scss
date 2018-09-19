@@ -1,4 +1,6 @@
+@import "home";
 @import "bootstrap";
+
 
 .wrapper {
 	width: 60%;
@@ -17,13 +19,51 @@
   background-color: #428bca;
   overflow-x: hidden;
   padding-top: 20px;
+  color: white;
 }
 
 .sidenav a {
     padding: 8px 8px 3px 3px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     display: block;
     transition: 0.3s;
+}
+.card {
+  width: 600px;
+  height: 350px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.card-block {
+  color: black;
+  text-align: left;
+  padding: 5% 0;
+}
+
+.auth-links a {
+  color: black;
+}
+
+.register-text {
+  text-align: right;
+}
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+}
+
+.welcome {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25%;
+  width: 40em;
+  text-align: center
+}
+
+.welcome-page {
+  
 }
