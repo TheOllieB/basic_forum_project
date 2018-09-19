@@ -1,0 +1,2 @@
+class Pages < ApplicationRecord
+end
