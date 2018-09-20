@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SoloProject</title>
+    <title>PostSite</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
     <style>
       @import url('https://fonts.googleapis.com/css?family=Raleway');
     </style>
@@ -14,12 +13,9 @@
   </head>
 
   <body>
-    <div class="row">
-      <div class="col-md-3">
-        <#% if user_signed_in? %>
+      <% if user_signed_in? %>
         <%= render "shared/nav" %>
-        <#% end %>
-    </div>
+      <% end %>
     <div class="wrapper">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

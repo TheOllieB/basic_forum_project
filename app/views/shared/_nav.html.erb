@@ -1,11 +1,14 @@
-<ul class="sidenav">
-  <% if user_signed_in? %>
-    <a> Logged in as <strong><%= current_user.username %></strong>.</a>
-    <a><%= link_to 'Edit profile', edit_user_registration_path %></a>
-    <a><%= link_to "Logout", destroy_user_session_path, method: :delete %></a>
-    <a><%= link_to "New Post", new_post_path %></a>
-  <% else %>
-    <a><%= link_to "Sign up", new_user_registration_path %></a>
-    <a><%= link_to "Login", new_user_session_path %></a>
-  <% end %>
-</ul>
+<div class="col-md-3">
+	<ul class="sidenav">
+	  <% if user_signed_in? %>
+	    <a> Logged in as <strong><%= current_user.username %></strong></a>
+	    <a><%= link_to 'Edit profile', edit_user_registration_path %></a>
+	    <a><%= link_to "Logout", destroy_user_session_path, method: :delete %></a>
+	    <a><%= link_to "Posts", posts_path %></a> 
+	    <a><%= link_to "New Post", new_post_path %></a>
+	  <% else %>
+	    <a><%= link_to "Sign up", new_user_registration_path %></a>
+	    <a><%= link_to "Login", new_user_session_path %></a>
+	  <% end %>
+	</ul>
+</div>

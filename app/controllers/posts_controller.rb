@@ -21,9 +21,10 @@ class PostsController < ApplicationController
  	end
 
  	def edit
+    current_user.posts.find(params[id])
 	end
 	def update
-		if @post.update(post_params)
+		if current_user.posts.update(post_params)
    redirect_to @post
   else
    render 'edit'

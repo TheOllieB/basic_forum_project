@@ -1,0 +1,18 @@
+@import "bootstrap";
+
+body {
+background: #428bca;
+	color: #428bca;
+}
+
+.welcome-page {
+	display: inline-block;
+  zoom: 1;
+  display: inline;
+  position: absolute;
+  left: 50% ;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 50%;
+}
